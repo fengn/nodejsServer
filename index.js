@@ -36,6 +36,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 routes(app);
+app.use(express.static('public'));
 // Enable preflight requests for all routes
 app.options('*', cors(corsOptions));
 
